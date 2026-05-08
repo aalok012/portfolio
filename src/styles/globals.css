@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg:            #1B1B1B;
+  --bg2:           #1F1F1F;
+  --surface:       #242424;
+  --surface-hi:    #2E2E2E;
+  --yellow:        #F8B400;
+  --yellow-dim:    #D49A00;
+  --white:         #FFFFFF;
+  --text:          #FFFFFF;
+  --text2:         #CCCCCC;
+  --text-muted:    #888888;
+  --border:        rgba(248, 180, 0, 0.14);
+  --border2:       rgba(248, 180, 0, 0.08);
+  --border-strong: rgba(248, 180, 0, 0.32);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body, #root { width: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── Glass ── */
+.glass {
+  background: rgba(36, 36, 36, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+}
+
+/* ── Bento card ── */
+.bento-card {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 0.75rem;
+  transition: border-color 0.25s ease;
+}
+.bento-card:hover {
+  border-color: var(--border);
+}
+
+/* ── Pill ── */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-family: 'JetBrains Mono', monospace;
+  border: 1px solid var(--border2);
+  color: var(--text-muted);
+  background: rgba(248, 180, 0, 0.04);
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  cursor: default;
+}
+.pill:hover {
+  background: rgba(248, 180, 0, 0.12);
+  border-color: rgba(248, 180, 0, 0.35);
+  color: var(--yellow);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--yellow); border-radius: 2px; }
+
+/* ── Reveal on scroll ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}

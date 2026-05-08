@@ -1,0 +1,257 @@
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 8rem 4rem 4rem;
+  gap: 4rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  color: var(--purple-light);
+  border: 1px solid var(--border);
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  width: fit-content;
+  background: var(--purple-glow2);
+  animation: fadeSlideUp 0.8s ease both;
+}
+
+.badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--purple);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.2rem, 6vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1.05;
+  color: var(--text);
+  animation: fadeSlideUp 0.8s 0.15s ease both;
+}
+
+.name em {
+  font-style: italic;
+  color: var(--purple-light);
+  display: block;
+}
+
+.tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--gold);
+  font-weight: 300;
+  border-left: 2px solid var(--gold);
+  padding-left: 1rem;
+  animation: fadeSlideUp 0.8s 0.3s ease both;
+}
+
+.desc {
+  font-size: 1rem;
+  color: var(--text2);
+  line-height: 1.75;
+  max-width: 480px;
+  animation: fadeSlideUp 0.8s 0.45s ease both;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  animation: fadeSlideUp 0.8s 0.6s ease both;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  background: var(--purple);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btnPrimary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(155, 109, 255, 0.4);
+}
+
+.btnPrimary:hover::before {
+  opacity: 1;
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  border: 1px solid var(--border);
+  color: var(--text2);
+  text-decoration: none;
+  font-size: 0.88rem;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.btnSecondary:hover {
+  border-color: var(--purple);
+  color: var(--purple-light);
+  transform: translateY(-2px);
+}
+
+/* Profile */
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1.2s 0.4s ease both;
+}
+
+.frame {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.ring {
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  animation: spinSlow 20s linear infinite;
+}
+
+.ring::before,
+.ring::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--purple);
+  border-radius: 50%;
+  top: 50%;
+  left: -5px;
+  box-shadow: 0 0 16px var(--purple);
+}
+
+.ring::after {
+  left: auto;
+  right: -5px;
+  background: var(--gold);
+  box-shadow: 0 0 16px var(--gold);
+}
+
+.ring2 {
+  position: absolute;
+  inset: -28px;
+  border-radius: 50%;
+  border: 1px dashed rgba(155, 109, 255, 0.2);
+  animation: spinSlow 30s linear infinite reverse;
+}
+
+.glow {
+  position: absolute;
+  inset: -60px;
+  background: radial-gradient(circle, rgba(155, 109, 255, 0.18) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.photo {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid var(--bg);
+  box-shadow: 0 0 0 1px var(--border), 0 30px 80px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 2;
+}
+
+/* Background orbs */
+
+.orb1 {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(107, 63, 212, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  top: -200px;
+  right: -200px;
+}
+
+.orb2 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(155, 109, 255, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  bottom: 0;
+  left: -100px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 7rem 2rem 3rem;
+    text-align: center;
+  }
+
+  .tagline,
+  .desc {
+    margin: 0 auto;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+
+  .right {
+    order: -1;
+  }
+
+  .frame,
+  .photo {
+    width: 240px;
+    height: 240px;
+  }
+}

@@ -1,0 +1,114 @@
+.section {
+  background: var(--bg2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.75rem;
+  transition: border-color 0.25s;
+}
+
+.card:hover {
+  border-color: var(--border-strong);
+}
+
+.cardIcon {
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--yellow);
+}
+
+.catIcon {
+  width: 1.4rem;
+  height: 1.4rem;
+  color: var(--yellow);
+}
+
+.cardTitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--yellow);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  padding: 0.28rem 0.7rem;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(212,160,23,0.12);
+  color: #6B6B6B;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  cursor: default;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.tag:hover {
+  border-color: rgba(212,160,23,0.3);
+  color: #D4A017;
+  background: rgba(212,160,23,0.06);
+}
+
+.tagIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+/* Animated icon variants */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-3px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { filter: brightness(1) drop-shadow(0 0 0px currentColor); }
+  50%       { filter: brightness(1.5) drop-shadow(0 0 5px currentColor); }
+}
+
+@keyframes bounce-scale {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.25); }
+}
+
+.iconSpin {
+  animation: spin 4s linear infinite;
+}
+
+.iconFloat {
+  animation: float 2.5s ease-in-out infinite;
+}
+
+.iconPulse {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.iconBounce {
+  animation: bounce-scale 1.8s ease-in-out infinite;
+}
