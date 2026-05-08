@@ -36,3 +36,4 @@ src/
 ```
 
 To update portfolio content, edit `src/data/resume.ts`. No other files need to change.
+# portfolio
