@@ -128,14 +128,6 @@ export default function HeroSection() {
             </div>
 
             <div className="flex justify-center gap-8 mt-8">
-              {[
-                { val: '4',    label: 'Projects' },
-              ].map(({ val, label }) => (
-                <div key={label} className="text-center">
-                  <p className="text-lg font-bold" style={{ color: '#F8B400' }}>{val}</p>
-                  <p className="text-xs mt-0.5" style={{ fontFamily: "'JetBrains Mono', monospace", color: '#888888' }}>{label}</p>
-                </div>
-              ))}
             </div>
           </div>
         </div>
