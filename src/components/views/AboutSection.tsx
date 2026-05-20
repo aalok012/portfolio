@@ -54,12 +54,6 @@ export default function AboutSection() {
               <p className="text-xs mt-1" style={{ color: '#888888' }}>{resume.contact.location}</p>
             </div>
 
-            <div className="flex gap-6">
-              <div className="text-center">
-                <p className="text-xl font-bold" style={{ color: '#F8B400' }}>4</p>
-                <p className="text-xs mt-0.5" style={{ fontFamily: "'JetBrains Mono', monospace", color: '#888888' }}>Projects</p>
-              </div>
-            </div>
 
             <div className="flex gap-3">
               <a
