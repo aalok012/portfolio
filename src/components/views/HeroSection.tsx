@@ -129,7 +129,6 @@ export default function HeroSection() {
 
             <div className="flex justify-center gap-8 mt-8">
               {[
-                { val: '3+',   label: 'Internships' },
                 { val: '4',    label: 'Projects' },
               ].map(({ val, label }) => (
                 <div key={label} className="text-center">

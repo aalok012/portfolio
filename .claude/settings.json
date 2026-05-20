@@ -4,7 +4,9 @@
       "Bash(node -e \"const icons = require\\('/Users/alokthakur/Downloads/Portfolio/node_modules/react-icons/si/index.js'\\); const keys = Object.keys\\(icons\\).filter\\(k => k.toLowerCase\\(\\).includes\\('aws'\\) || k.toLowerCase\\(\\).includes\\('amazon'\\)\\); console.log\\(keys\\)\")",
       "Bash(node -e \"const icons = require\\('/Users/alokthakur/Downloads/Portfolio/node_modules/react-icons/si/index.js'\\); const keys = Object.keys\\(icons\\).filter\\(k => k.toLowerCase\\(\\).includes\\('lang'\\)\\); console.log\\(keys\\)\")",
       "Bash(gh auth *)",
-      "Bash(gh repo *)"
+      "Bash(gh repo *)",
+      "Bash(ls ~/.ssh/)",
+      "Read(//Users/alokthakur/.ssh/**)"
     ]
   }
 }

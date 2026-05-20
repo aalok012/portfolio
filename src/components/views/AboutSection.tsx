@@ -56,7 +56,6 @@ export default function AboutSection() {
 
             <div className="flex gap-6">
               {[
-                { val: '3+', label: 'Internships' },
                 { val: '4',  label: 'Projects' },
               ].map(({ val, label }) => (
                 <div key={label} className="text-center">
@@ -142,18 +141,18 @@ export default function AboutSection() {
               <a
                 href={resume.contact.github}
                 target="_blank" rel="noopener noreferrer"
-                className="px-6 py-3 rounded-full text-sm font-medium"
+                className="flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium"
                 style={{ border: '1px solid rgba(248,180,0,0.3)', color: '#F8B400', textDecoration: 'none' }}
               >
-                GitHub ↗
+                <SiGithub size={14} /> GitHub
               </a>
               <a
                 href={resume.contact.linkedin}
                 target="_blank" rel="noopener noreferrer"
-                className="px-6 py-3 rounded-full text-sm font-medium"
+                className="flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium"
                 style={{ border: '1px solid rgba(248,180,0,0.3)', color: '#F8B400', textDecoration: 'none' }}
               >
-                LinkedIn ↗
+                <FaLinkedinIn size={14} /> LinkedIn
               </a>
             </div>
           </div>
