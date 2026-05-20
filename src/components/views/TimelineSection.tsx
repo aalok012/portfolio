@@ -12,9 +12,9 @@ const entries: Entry[] = [
     type: 'work' as const,
   })),
   {
-    date: 'Aug 2023 – Present',
+    date: 'Aug 2024 – Present',
     title: resume.education.degree,
-    org: `${resume.education.school} · GPA ${resume.education.gpa}`,
+    org: resume.education.school,
     bullets: [`Courses: ${resume.education.courses.join(', ')}`],
     type: 'edu' as const,
   },

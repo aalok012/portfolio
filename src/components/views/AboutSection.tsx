@@ -56,7 +56,6 @@ export default function AboutSection() {
 
             <div className="flex gap-6">
               {[
-                { val: resume.education.gpa, label: 'GPA' },
                 { val: '3+', label: 'Internships' },
                 { val: '4',  label: 'Projects' },
               ].map(({ val, label }) => (
@@ -97,21 +96,20 @@ export default function AboutSection() {
               className="font-semibold leading-snug"
               style={{ fontFamily: "'Outfit', sans-serif", fontSize: 'clamp(1.5rem, 2.5vw, 2.1rem)', color: '#FFFFFF' }}
             >
-              I build systems that{' '}
-              <span style={{ color: '#F8B400' }}>scale</span>{' '}
-              and ship on time.
+              I build things that{' '}
+              <span style={{ color: '#F8B400' }}>work</span>{' '}
+              and get done.
             </h2>
 
             <div className="flex flex-col gap-4 text-base leading-relaxed" style={{ color: '#888888' }}>
               <p>
                 I'm a <strong style={{ color: '#FFFFFF' }}>Software Engineer</strong> and{' '}
-                <strong style={{ color: '#FFFFFF' }}>CS student at Texas State University</strong>{' '}
-                (GPA: <strong style={{ color: '#F8B400' }}>{resume.education.gpa}</strong>), focused on building
-                backend systems, REST APIs, and AI-powered applications.
+                <strong style={{ color: '#FFFFFF' }}>CS student at Texas State</strong>{' '}
+                (with minors in Applied Math and Economics).{' '}
+                I mostly work on backend systems, APIs, and apps powered by AI.
               </p>
               <p>
-                My interests span distributed systems, applied mathematics, and machine learning — I enjoy
-                work that requires both engineering precision and creative problem-solving.
+                I like solving hard problems, writing clean code, and learning how things work under the hood.
               </p>
             </div>
 
@@ -122,7 +120,6 @@ export default function AboutSection() {
               {[
                 { label: 'Location',     value: resume.contact.location },
                 { label: 'University',   value: 'Texas State University' },
-                { label: 'GPA',          value: `${resume.education.gpa} / 4.0` },
                 { label: 'Degree',       value: 'B.S. Computer Science' },
                 { label: 'Email',        value: resume.contact.email },
                 { label: 'Availability', value: 'Open to opportunities' },
@@ -179,15 +176,11 @@ export default function AboutSection() {
               style={{ borderColor: 'rgba(248,180,0,0.1)' }}
             >
               <div>
-                <p className="text-2xl font-bold" style={{ color: '#F8B400' }}>{resume.education.gpa}</p>
-                <p className="text-xs mt-0.5" style={{ fontFamily: "'JetBrains Mono', monospace", color: '#888888' }}>GPA / 4.0</p>
-              </div>
-              <div>
-                <p className="text-2xl font-bold" style={{ color: '#F8B400' }}>Aug '23</p>
+                <p className="text-2xl font-bold" style={{ color: '#F8B400' }}>Aug '24</p>
                 <p className="text-xs mt-0.5" style={{ fontFamily: "'JetBrains Mono', monospace", color: '#888888' }}>Enrolled</p>
               </div>
               <div>
-                <p className="text-2xl font-bold" style={{ color: '#F8B400' }}>May '26</p>
+                <p className="text-2xl font-bold" style={{ color: '#F8B400' }}>May '28</p>
                 <p className="text-xs mt-0.5" style={{ fontFamily: "'JetBrains Mono', monospace", color: '#888888' }}>Expected</p>
               </div>
             </div>

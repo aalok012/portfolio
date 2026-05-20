@@ -131,7 +131,6 @@ export default function HeroSection() {
               {[
                 { val: '3+',   label: 'Internships' },
                 { val: '4',    label: 'Projects' },
-                { val: '3.86', label: 'GPA' },
               ].map(({ val, label }) => (
                 <div key={label} className="text-center">
                   <p className="text-lg font-bold" style={{ color: '#F8B400' }}>{val}</p>
