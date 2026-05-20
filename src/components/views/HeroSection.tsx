@@ -127,8 +127,6 @@ export default function HeroSection() {
               />
             </div>
 
-            <div className="flex justify-center gap-8 mt-8">
-            </div>
           </div>
         </div>
 

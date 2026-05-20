@@ -55,6 +55,10 @@ export default function AboutSection() {
             </div>
 
             <div className="flex gap-6">
+              <div className="text-center">
+                <p className="text-xl font-bold" style={{ color: '#F8B400' }}>4</p>
+                <p className="text-xs mt-0.5" style={{ fontFamily: "'JetBrains Mono', monospace", color: '#888888' }}>Projects</p>
+              </div>
             </div>
 
             <div className="flex gap-3">
